@@ -8,7 +8,7 @@ pipeline {
                 sh 'mvn --version'
                 echo 'Building ...'
                 sh 'mvn package'
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
             }
         }
         stage('test') {
